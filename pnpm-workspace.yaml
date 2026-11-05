@@ -5,3 +5,6 @@ minimumReleaseAge: 1440
 # Transitive dependencies may come only from the registry, never from Git or
 # tarball URLs.
 blockExoticSubdeps: true
+# Install scripts run only for the packages named here (pnpm 12 refuses the
+# rest). None of this library's dependencies needs one.
+allowBuilds: {}
