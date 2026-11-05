@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1",
+  "name": "@nuxt-layers/rich-text",
+  "version": "0.0.0",
+  "classification": "library",
+  "provides": [
+    { "capability": "RichText", "contractVersion": "1" }
+  ],
+  "requires": []
+}
