@@ -1,8 +1,8 @@
-# @nuxt4-layers/rich-text
+# @nuxt-layers/rich-text
 
 > **In short:** a small TypeScript library that lets any layer accept formatted text, such as bold, links, lists and tables, safely. It defines one format, a safe subset of Markdown; checks text against it before it is saved; and turns saved text into a **safe tree** that a screen can draw with no risk of injected HTML. It stores nothing and draws nothing.
 
-Governed by [ADR-0011](https://github.com/nuxt4-layers/platform-architecture/blob/b3ef6dd53faa097d7a6b509ec714ea7e447b3051/docs/decisions/ADR-0011-shared-rich-text-and-configurable-copy.md).
+Governed by [ADR-0011](https://github.com/nuxt-layers/platform-architecture/blob/b3ef6dd53faa097d7a6b509ec714ea7e447b3051/docs/decisions/ADR-0011-shared-rich-text-and-configurable-copy.md).
 
 ## Who uses it
 
@@ -56,7 +56,7 @@ Any other destination, such as `javascript:`, `data:`, `http:` or `//host`, is i
 
 ```ts
 import { z } from 'zod'
-import { checkRichText, parseRichText, richTextFields, richTextSchema } from '@nuxt4-layers/rich-text'
+import { checkRichText, parseRichText, richTextFields, richTextSchema } from '@nuxt-layers/rich-text'
 
 // Declare: a formatted field names its profile and maximum length
 const fields = z.strictObject({
@@ -85,7 +85,7 @@ const nodes = parseRichText(source, 'block')
 | `normaliseRichText(source)` | One form for equal text: Unicode NFC and `\n` line ends. Check a normalised source: a carriage return is a control character |
 | `RICH_TEXT_*`, link and character patterns, `safeHref` | The format's rules, as data |
 
-Drawing the tree is `nuxt4-layers/ui`'s; editing a formatted field is `content-editor`'s, or a plain `<textarea>`.
+Drawing the tree is `nuxt-layers/ui`'s; editing a formatted field is `content-editor`'s, or a plain `<textarea>`.
 
 ## Guardrails
 
